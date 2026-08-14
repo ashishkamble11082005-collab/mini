@@ -1,0 +1,13 @@
+From: =?INVALID-CHARSET?Q?Corrupt_Sender?= <broken-address
+Date: INVALID_DATE_HEADER_STAMP_12345
+Subject: =?UTF-8?B?Q29ycnVwdGVkIEVtYWlsVGVzdA==?=
+Received: bad hop string without semicolon
+X-Custom: Header 1
+X-Custom: Header 2
+
+This email has broken headers and bad boundaries.
+--BAD_BOUNDARY
+Content-Type: application/octet-stream; name="fake.exe"
+Content-Disposition: attachment; filename="../../../../C:\Windows\System32\fake.exe"
+
+\x00\x01\x02\x03\x04

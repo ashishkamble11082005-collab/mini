@@ -1,0 +1,9 @@
+From: Alice <alice@example.com>
+To: Bob <bob@example.com>
+Subject: Plain Text Email Test
+Date: Thu, 13 Aug 2026 12:00:00 +0000
+Message-ID: <msg_001@example.com>
+Content-Type: text/plain; charset="utf-8"
+
+This is a simple plain text body for testing.
+Visit http://example.com/welcome for more details.

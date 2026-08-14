@@ -1,0 +1,21 @@
+From: HR <hr@company.com>
+To: Employee <emp@company.com>
+Subject: Important Document Attached
+Date: Thu, 13 Aug 2026 14:00:00 +0000
+Content-Type: multipart/mixed; boundary="MIXED_BOUND"
+
+--MIXED_BOUND
+Content-Type: text/plain; charset="utf-8"
+
+Please see the attached PDF document.
+--MIXED_BOUND
+Content-Type: application/pdf; name="Report.pdf"
+Content-Disposition: attachment; filename="Report.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQKJSDl4uXzCjEgMCBvYmoKPDwvTGVuZ3RoIDUgMCBSL0ZpbHRlci9GbGF0ZURlY29k
+ZT4+CnN0cmVhbQp4nG2OuwrCQBBEe3/Fpgh290022YAhCGIh+AA/wF5sLIxFtNn1+5skgYlh
+hjkchpkZzN1D
+endstream
+endobj
+--MIXED_BOUND--

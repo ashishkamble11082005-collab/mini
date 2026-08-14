@@ -1,0 +1,20 @@
+From: Sender <sender@company.org>
+To: Recipient <user@company.org>
+Subject: =?UTF-8?B?TmV3cyBBbGVydDogU2VjdXJpdHk=?=
+Date: Thu, 13 Aug 2026 13:15:00 +0000
+Content-Type: multipart/alternative; boundary="ALT_BOUND"
+
+--ALT_BOUND
+Content-Type: text/plain; charset="utf-8"
+
+Please read our security update at https://company.org/sec
+--ALT_BOUND
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+    <p>Please read our security update at <a href="https://company.org/sec">Security Page</a></p>
+    <img src="cid:banner_img_123" alt="Logo Banner" />
+</body>
+</html>
+--ALT_BOUND--

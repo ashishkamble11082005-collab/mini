@@ -1,0 +1,14 @@
+From: Security Alert <no-reply@phish-sim.org>
+To: Target <target@bank.com>
+Subject: Urgent: Verify Account Status
+Date: Thu, 13 Aug 2026 15:00:00 +0000
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+    <p>Your account requires verification.</p>
+    <p>Visit hxxps://secure-login[.]phish-domain[.]com/verify or http://192.168.1.50/admin</p>
+    <a href="hxxp://malicious(dot)site/login">Click Here to Login</a>
+    <a href="http://xn--e1afmkfd.xn--p1ai">Punycode IDN Link</a>
+</body>
+</html>
