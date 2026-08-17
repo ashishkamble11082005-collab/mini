@@ -6,6 +6,7 @@ without ever raising unhandled exceptions.
 """
 
 from email_parser.parser import EmailParser
+self.authentication_extractor = AuthenticationExtractor()
 from email_parser.schemas import (
     HeaderData,
     AttachmentMetadata,
