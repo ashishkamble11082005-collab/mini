@@ -46,6 +46,7 @@ class EmailParser:
         """
         self.max_recursion_depth = max_recursion_depth
         self.header_parser = HeaderParser()
+        self.authentication_extractor = AuthenticationExtractor()
         self.body_extractor = BodyExtractor()
         self.attachment_extractor = AttachmentExtractor(
             max_attachment_size_mb=max_attachment_size_mb, save_to=save_attachments_to
@@ -83,12 +84,26 @@ class EmailParser:
             )
 
         msg = None
+        authentication_context = None
+
         try:
-            msg = self.header_parser.bytes_parser.parsebytes(raw_bytes)
+         msg = self.header_parser.bytes_parser.parsebytes(raw_bytes)
         except Exception as e:
-            err_msg = f"BytesParser failed to ingest bytes: {e}"
-            logger.warning(err_msg)
-            parsing_errors.append(err_msg)
+         err_msg = f"BytesParser failed to ingest bytes: {e}"
+         logger.warning(err_msg)
+         parsing_errors.append(err_msg)
+
+
+        try:
+         authentication_context = (
+         self.authentication_extractor.extract_from_bytes(
+            raw_bytes
+        )
+    )
+        except Exception as e:
+         err_msg = f"Authentication extraction stage failed: {e}"
+         logger.error(err_msg, exc_info=True)
+         parsing_errors.append(err_msg)
 
         # STAGE 1: Header Parsing
         header_data = HeaderData()
