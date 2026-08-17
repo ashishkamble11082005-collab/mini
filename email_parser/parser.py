@@ -14,7 +14,7 @@ import argparse
 from pathlib import Path
 from typing import BinaryIO, Union
 from datetime import datetime, timezone
-
+from email_parser.authentication_extractor import AuthenticationExtractor
 from email_parser.schemas import ParsedEmailResult, HeaderData, BodyData
 from email_parser.header_parser import HeaderParser
 from email_parser.body_extractor import BodyExtractor
