@@ -1,7 +1,7 @@
 from email import policy
 from email.parser import BytesParser
 
-from authentication_extractor import (
+from email_parser.authentication_extractor import (
     AuthenticationExtractor
 )
 
