@@ -1,0 +1,198 @@
+{
+  "model_version": "v2.0.0",
+  "model_type": "RandomForestClassifier",
+  "dataset_notice": "TRAINED AND EVALUATED EXCLUSIVELY ON SYNTHETIC/SIMULATED DATASETS. REPORTED METRICS REFLECT SYNTHETIC TEST PERFORMANCE ONLY AND MUST NOT BE CITED AS VERIFIED REAL-WORLD BASELINE PERFORMANCE.",
+  "num_features": 22,
+  "feature_names": [
+    "spf_pass",
+    "spf_fail",
+    "spf_none",
+    "dkim_pass",
+    "dkim_fail",
+    "dkim_none",
+    "dmarc_pass",
+    "dmarc_fail",
+    "dmarc_none",
+    "hop_count",
+    "max_hop_delay_sec",
+    "body_char_count",
+    "body_entropy",
+    "uppercase_ratio",
+    "urgency_word_count",
+    "html_to_text_ratio",
+    "url_count",
+    "ip_literal_count",
+    "defanged_url_count",
+    "mismatched_anchor_count",
+    "attachment_count",
+    "mime_mismatch_detected"
+  ],
+  "feature_manifest": [
+    {
+      "index": 0,
+      "name": "spf_pass",
+      "type": "float32",
+      "description": "Binary indicator for SPF pass result (1.0 or 0.0)"
+    },
+    {
+      "index": 1,
+      "name": "spf_fail",
+      "type": "float32",
+      "description": "Binary indicator for SPF fail/softfail/permerror result (1.0 or 0.0)"
+    },
+    {
+      "index": 2,
+      "name": "spf_none",
+      "type": "float32",
+      "description": "Binary indicator for SPF neutral/none result (1.0 or 0.0)"
+    },
+    {
+      "index": 3,
+      "name": "dkim_pass",
+      "type": "float32",
+      "description": "Binary indicator for DKIM pass result (1.0 or 0.0)"
+    },
+    {
+      "index": 4,
+      "name": "dkim_fail",
+      "type": "float32",
+      "description": "Binary indicator for DKIM fail/invalid result (1.0 or 0.0)"
+    },
+    {
+      "index": 5,
+      "name": "dkim_none",
+      "type": "float32",
+      "description": "Binary indicator for DKIM neutral/none result (1.0 or 0.0)"
+    },
+    {
+      "index": 6,
+      "name": "dmarc_pass",
+      "type": "float32",
+      "description": "Binary indicator for DMARC pass result (1.0 or 0.0)"
+    },
+    {
+      "index": 7,
+      "name": "dmarc_fail",
+      "type": "float32",
+      "description": "Binary indicator for DMARC fail result (1.0 or 0.0)"
+    },
+    {
+      "index": 8,
+      "name": "dmarc_none",
+      "type": "float32",
+      "description": "Binary indicator for DMARC neutral/none result (1.0 or 0.0)"
+    },
+    {
+      "index": 9,
+      "name": "hop_count",
+      "type": "float32",
+      "description": "Total count of parsed Received email routing hops"
+    },
+    {
+      "index": 10,
+      "name": "max_hop_delay_sec",
+      "type": "float32",
+      "description": "Maximum delay in seconds detected across routing hops"
+    },
+    {
+      "index": 11,
+      "name": "body_char_count",
+      "type": "float32",
+      "description": "Total character count of plain text email body"
+    },
+    {
+      "index": 12,
+      "name": "body_entropy",
+      "type": "float32",
+      "description": "Shannon entropy score of plain text email body character distribution"
+    },
+    {
+      "index": 13,
+      "name": "uppercase_ratio",
+      "type": "float32",
+      "description": "Ratio of uppercase characters to total body text length"
+    },
+    {
+      "index": 14,
+      "name": "urgency_word_count",
+      "type": "float32",
+      "description": "Occurrences of social engineering and urgency lexicon keywords"
+    },
+    {
+      "index": 15,
+      "name": "html_to_text_ratio",
+      "type": "float32",
+      "description": "Ratio of HTML character length to plain text character length"
+    },
+    {
+      "index": 16,
+      "name": "url_count",
+      "type": "float32",
+      "description": "Total count of URLs extracted from email body text and HTML"
+    },
+    {
+      "index": 17,
+      "name": "ip_literal_count",
+      "type": "float32",
+      "description": "Count of raw IP address literal URLs detected in payload"
+    },
+    {
+      "index": 18,
+      "name": "defanged_url_count",
+      "type": "float32",
+      "description": "Count of defanged/obfuscated URLs (e.g. hxxp, [.] , (dot))"
+    },
+    {
+      "index": 19,
+      "name": "mismatched_anchor_count",
+      "type": "float32",
+      "description": "Count of deceptive anchor text links mismatching netloc/domain"
+    },
+    {
+      "index": 20,
+      "name": "attachment_count",
+      "type": "float32",
+      "description": "Total count of extracted email attachments"
+    },
+    {
+      "index": 21,
+      "name": "mime_mismatch_detected",
+      "type": "float32",
+      "description": "Binary flag indicating magic bytes vs declared MIME content type mismatch (1.0 or 0.0)"
+    }
+  ],
+  "threshold_constants": {
+    "WEIGHT_ML": 65.0,
+    "PENALTY_EXPLICIT_AUTH_FAIL": 15.0,
+    "PENALTY_IP_URL": 12.0,
+    "PENALTY_ANCHOR_MISMATCH": 18.0,
+    "PENALTY_DEFANGED": 10.0,
+    "OVERRIDE_FLOOR_MIME_MISMATCH": 85.0,
+    "OVERRIDE_FLOOR_PHISH_TRIPWIRE": 80.0,
+    "ML_THREAT_CONFIDENCE_THRESHOLD": 0.5,
+    "RISK_TIER_CRITICAL_MIN": 80.0,
+    "RISK_TIER_HIGH_MIN": 60.0,
+    "RISK_TIER_MEDIUM_MIN": 35.0,
+    "RISK_TIER_LOW_MIN": 0.0
+  },
+  "categorical_encodings": {
+    "auth_states": [
+      "PASS",
+      "FAIL",
+      "NONE"
+    ]
+  },
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 18,
+    "min_samples_split": 4,
+    "min_samples_leaf": 2,
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "trained_at_iso": "2026-10-09T09:20:22.901248+00:00",
+  "roc_auc_score": 1.0,
+  "train_samples": 3200,
+  "test_samples": 800
+}

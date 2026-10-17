@@ -1,0 +1,35 @@
+{
+  "feature_names": [
+    "spf_pass",
+    "dkim_pass",
+    "dmarc_pass",
+    "hop_count",
+    "max_hop_delay_sec",
+    "body_char_count",
+    "body_entropy",
+    "uppercase_ratio",
+    "urgency_word_count",
+    "html_to_text_ratio",
+    "url_count",
+    "ip_literal_count",
+    "defanged_url_count",
+    "mismatched_anchor_count",
+    "attachment_count",
+    "mime_mismatch_detected"
+  ],
+  "n_features": 16,
+  "model_type": "RandomForestClassifier",
+  "hyperparameters": {
+    "n_estimators": 250,
+    "max_depth": 16,
+    "min_samples_split": 4,
+    "min_samples_leaf": 2,
+    "class_weight": "balanced_subsample",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "trained_at_iso": "2026-10-05T13:53:38.014165+00:00",
+  "roc_auc_score": 1.0,
+  "train_samples": 2400,
+  "test_samples": 600
+}

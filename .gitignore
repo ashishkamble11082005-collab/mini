@@ -1,0 +1,36 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+oauth_client.json
+token.json
+*credentials*.json
+*secret*.json
+
+# OAuth tokens and local databases
+instance/
+*.sqlite
+*.sqlite3
+*.db
+
+# Raw emails and debug artifacts
+debug_message.eml
+*.eml
+*.log
+
+# Python environments and generated files
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local backups
+*.backup
+*.bak
+*.backup.sqlite3
+
+# DKIM debugging artifacts
+shieldmail_canonicalized.bin
+dkimpy_canonicalized.bin
+
+.vscode/
